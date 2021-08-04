@@ -7,6 +7,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>foodproject-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+   <properties>
+    <sonar.host.url>http://34.132.132.243:9000/</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin</sonar.password>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,6 +20,13 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+  <repository> 
+    <id>nexus</id>
+    <name>food project</name>
+    <url>http://35.224.112.130:8081/repository/foodproject-release/</url>
+    </repository>
+  </distributionManagement>
   <build>
     <finalName>foodproject-webapp</finalName>
   </build>
